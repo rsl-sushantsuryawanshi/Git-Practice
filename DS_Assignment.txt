@@ -1,0 +1,28 @@
+Q1.Implement a doubly linked-list program link https://github.com/rsl-sushantsuryawanshi/Git-Practice/tree/task_data_structure
+
+Q2 Google Drive link for audio file https://drive.google.com/file/d/1v70MBzLpkfQd6UFlm-zBV-jQC0MZl_Mg/view?usp=share_link
+
+Q3  a. Storing vehicle parts and their respective costing
+        Appropriate Data Structure: Hash Map
+        As vehicle manufacturer each part name or part ID is associated with specific cost. This is classic key value pair.
+
+    b. Mark attendance for a class of students
+        Appropriate Data Structure: Array/list
+        Attendance marking involves storing a fixed or known set of students and their attendance status present or absent.
+        Each index represents student and the value represents attendance status.
+        Memory usage is minimal.
+
+    c. Make a music player with a functionality to navigate to the previous/next song.
+        Appropriate Data Structure: Doubly linked list
+        A music player requires Moving to the next song and Moving back to the previous song.
+        A Doubly link List stores a reference to the next song and a reference to the previous song.
+        This makes navigation smooth and efficient in both directions.
+
+    d. Write a parser to check whether my code sentence has correct number of closing brackets.
+        Appropriate Data Structure: Stack
+        Bracket validation follows the Last In , First Out (LIFO) principle.
+        process:
+        Push opening brackets onto the stack.
+        when a closing bracket appers, pop the stack
+        If brackets match then continue
+        If stack is empty or mismatch then invalid code.
