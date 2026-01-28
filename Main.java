@@ -1,26 +1,34 @@
-
+/**
+ * Component: Engine
+ */
 class Engine {
     public void turnOn() {
         System.out.println("Engine is now running.");
     }
 }
 
-
+/**
+ * Component: Ignition 
+ */
 class Ignition {
     public void start(Engine engine) {
-        System.out.print("Ignition: Sparking ");
+        System.out.print("Ignition: Sparking... ");
         engine.turnOn(); 
     }
 }
 
-
+/**
+ * Component: Brake
+ */
 class Brake {
     public void apply() {
         System.out.println("Brakes applied.");
     }
 }
 
-
+/**
+ * Abstraction: The base Vehicle blueprint
+ */
 abstract class Vehicle {
     protected String model;
     protected Engine engine = new Engine();       
@@ -35,7 +43,9 @@ abstract class Vehicle {
     public abstract void stop(); 
 }
 
-
+/**
+ * Inheritance: Specific Car implementation
+ */
 class Car extends Vehicle {
     public Car(String model) { super(model); }
 
@@ -52,7 +62,9 @@ class Car extends Vehicle {
     }
 }
 
-
+/**
+ * Inheritance: Specific Cycle implementation
+ */
 class Cycle extends Vehicle {
     public Cycle(String model) { super(model); }
 
@@ -68,7 +80,9 @@ class Cycle extends Vehicle {
     }
 }
 
-
+/**
+ * Factory: Handles object creation
+ */
 class VehicleFactory {
     public static Vehicle createVehicle(String type, String model) {
         if (type.equalsIgnoreCase("car")) return new Car(model);
@@ -77,6 +91,9 @@ class VehicleFactory {
     }
 }
 
+/**
+ * Main Application
+ */
 public class Main {
     public static void main(String[] args) {
         Vehicle myCar = VehicleFactory.createVehicle("car", "Toyota");
@@ -85,7 +102,7 @@ public class Main {
         myCar.run();
         myCar.stop();
 
-        System.out.println("---");
+        
 
         myCycle.run();
         myCycle.stop();
